@@ -33,8 +33,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
-import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+
 
 
 # normalize the text display
@@ -55,3 +54,11 @@ streamlit.dataframe(my_data_rows)
 # streamlit.text("Hello from Snowflake:")
 # streamlit.text("The fruit load list contains:")
 # streamlit.text(my_data_row)
+
+
+# Allow the end user to add a fruit to the list
+# streamlit.header("Fruityvice Fruit Advice!")
+add_my_fruit = streamlit.text_input('What fruit would you like to add?','')
+streamlit.write('The user entered ', add_my_fruit)
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
