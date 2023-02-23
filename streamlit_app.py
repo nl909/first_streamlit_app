@@ -66,7 +66,7 @@ streamlit.dataframe(my_data_rows)
 # streamlit.header("Fruityvice Fruit Advice!")
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','')
 streamlit.write('Thanks for adding ', add_my_fruit)
-import requests
+# import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
 
 
